@@ -51,7 +51,7 @@ namespace dotnet_project.Facade
                 conn?.Close();
         }
 
-        
+
     }
 
     public static class AbstractFacadeMethods
@@ -75,4 +75,5 @@ namespace dotnet_project.Facade
         {
             return query.Get<T>().Any();
         }
+    }
 }

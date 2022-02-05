@@ -10,10 +10,10 @@ namespace dotnet_project.Controllers
 {
     public class EmpresaController : Controller
     {
-        fcEmpresa fcEmpresa = new fcEmpresa();
+        FcEmpresa fcEmpresa = new FcEmpresa();
         public ActionResult Index()
         {
-            ViewBag.Empresas = fcEmpresa.listarEmpresas();
+            ViewBag.Empresas = fcEmpresa.ListarEmpresas();
             return View();
         }
     }

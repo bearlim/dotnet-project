@@ -6,9 +6,9 @@ using System.Web;
 
 namespace dotnet_project.Facade
 {
-    public class fcEmpresa : AbstractFacade
+    public class FcEmpresa : AbstractFacade
     {
-        public List<Empresa> listarEmpresas()
+        public List<Empresa> ListarEmpresas()
         {
             String sql = "SELECT * FROM tb_EMPRESA";
 
