@@ -1,0 +1,64 @@
+﻿@model dotnet_project.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nmUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nmUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nmLogin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nmLogin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dsEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cdCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cdCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpresa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

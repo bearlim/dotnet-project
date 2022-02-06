@@ -1,0 +1,58 @@
+﻿@model dotnet_project.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nmUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nmUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nmLogin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nmLogin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dsEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dsEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cdCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cdCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpresa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idUsuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

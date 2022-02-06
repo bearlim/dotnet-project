@@ -1,0 +1,57 @@
+﻿@model IEnumerable<dotnet_project.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nmUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nmLogin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dsEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cdCPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEmpresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nmUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nmLogin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dsEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cdCPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEmpresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idUsuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idUsuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idUsuario })
+        </td>
+    </tr>
+}
+
+</table>
