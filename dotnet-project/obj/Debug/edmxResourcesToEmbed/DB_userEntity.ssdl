@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_UserModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_USUARIO">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nmUsuario" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="nmLogin" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dsEmail" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="cdCPF" Type="varchar" MaxLength="50" />
+    <Property Name="idEmpresa" Type="int" />
+  </EntityType>
+  <EntityContainer Name="db_UserModelStoreContainer">
+    <EntitySet Name="tb_USUARIO" EntityType="Self.tb_USUARIO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

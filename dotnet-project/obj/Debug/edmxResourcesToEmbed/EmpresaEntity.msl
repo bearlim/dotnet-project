@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmpresaModelStoreContainer" CdmEntityContainer="EmpresaEntities">
+    <EntitySetMapping Name="tb_EMPRESA">
+      <EntityTypeMapping TypeName="EmpresaModel.tb_EMPRESA">
+        <MappingFragment StoreEntitySet="tb_EMPRESA">
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="nmEmpresa" ColumnName="nmEmpresa" />
+          <ScalarProperty Name="nmRazaoSocial" ColumnName="nmRazaoSocial" />
+          <ScalarProperty Name="cdCNPJ" ColumnName="cdCNPJ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsuarioModelStoreContainer" CdmEntityContainer="UsuarioEntities">
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="UsuarioModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="nmUsuario" ColumnName="nmUsuario" />
+          <ScalarProperty Name="nmLogin" ColumnName="nmLogin" />
+          <ScalarProperty Name="dsEmail" ColumnName="dsEmail" />
+          <ScalarProperty Name="cdCPF" ColumnName="cdCPF" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="UsuarioModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="dsSenha" ColumnName="dsSenha" />
+          <ScalarProperty Name="nmLogin" ColumnName="nmLogin" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
