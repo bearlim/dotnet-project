@@ -24,7 +24,15 @@
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Login", "tb_USUARIO")</li>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Gerenciar Usuários", "Index", "Usuarios")</li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    }
                 </ul>
             </div>
         </div>
